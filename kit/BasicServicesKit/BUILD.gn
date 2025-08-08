@@ -19,13 +19,13 @@ ohos_cj_library("kit.BasicServicesKit") {
   cj_deps = ["../../ohos/settings:ohos.settings"]
 
   cj_external_deps = [
-    "startup_cangjie_api:ohos.device_info",
-    "request_cangjie_api:ohos.request.agent",
-    "time_cangjie_api:ohos.system_date_time",
-    "notification_cangjie_api:ohos.common_event_manager",
-    "powermgr_cangjie_api:ohos.battery_info"
+    "startup_cangjie_wrapper:ohos.device_info",
+    "request_cangjie_wrapper:ohos.request.agent",
+    "time_cangjie_wrapper:ohos.system_date_time",
+    "notification_cangjie_wrapper:ohos.common_event_manager",
+    "powermgr_cangjie_wrapper:ohos.battery_info"
   ]
 
   subsystem_name = "applications"
-  part_name = "applications_cangjie_api"
+  part_name = "applications_cangjie_wrapper"
 }

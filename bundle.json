@@ -1,16 +1,16 @@
 {
-    "name": "@ohos/applications_cangjie_api",
+    "name": "@ohos/applications_cangjie_wrapper",
     "description": "Settings app for standard system.",
     "version": "6.0",
     "license": "Apache License 2.0",
     "publishAs": "code-segment",
     "segment": {
-        "destPath": "applications/standard/applications_cangjie_api"
+        "destPath": "applications/standard/applications_cangjie_wrapper"
     },
     "dirs": {},
     "scripts": {},
     "component": {
-        "name": "applications_cangjie_api",
+        "name": "applications_cangjie_wrapper",
         "subsystem": "applications",
         "syscap": [
             "SystemCapability.Applications.Settings.Core"
@@ -23,16 +23,16 @@
         "ram": "",
         "deps": {
             "components": [
-                "cangjie_api",
-                "ability_cangjie_api",
-                "arkui_cangjie_api",
+                "cangjie_ark_interop",
+                "ability_cangjie_wrapper",
+                "arkui_cangjie_wrapper",
                 "settings"
             ]
         },
         "build": {
             "sub_component": [
-                "//applications/standard/applications_cangjie_api/ohos/settings:ohos.settings",
-                "//applications/standard/applications_cangjie_api/kit/BasicServicesKit:kit.BasicServicesKit"
+                "//applications/standard/applications_cangjie_wrapper/ohos/settings:ohos.settings",
+                "//applications/standard/applications_cangjie_wrapper/kit/BasicServicesKit:kit.BasicServicesKit"
             ],
             "inner_kits": [
             ],

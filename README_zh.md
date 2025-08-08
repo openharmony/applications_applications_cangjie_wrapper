@@ -11,7 +11,7 @@
 ## 目录
 
 ```
-applications/standard/applications_cangjie_api
+applications/standard/applications_cangjie_wrapper
 ├── ohos             # 仓颉Settings接口实现
 ├── kit              # 仓颉kit化代码
 ├── figures          # 存放readme中的架构图
@@ -19,6 +19,6 @@ applications/standard/applications_cangjie_api
 
 ## 相关仓
 
-applications_cangjie_api
+applications_cangjie_wrapper
 
 [applications_settings](https://gitee.com/openharmony/applications_settings/blob/master/README.md)
