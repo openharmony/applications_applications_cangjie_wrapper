@@ -1,3 +1,24 @@
-# applications_applications_cangjie_wrapper
+# Settings
 
-系统应用模块仓颉封装层
+## Introduction
+
+The Settings is a system application prebuilt in OpenHarmony. It provides a human-machine interactions entry for users to set system configs like settings system time, lightness of screen and etc.
+
+### Architecture
+
+![](figures/en-us_image_0000001153225717.png)
+
+## Directory Structure
+
+```
+applications/standard/applications_cangjie_api
+├── ohos             # Cangjie Settings code
+├── kit              # Cangjie kit code
+├── figures          # architecture pictures
+```
+
+## Repositories Involved
+
+applications_cangjie_api
+
+[applications_settings](https://gitee.com/openharmony/applications_settings/blob/master/README.md)
