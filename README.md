@@ -1,0 +1,3 @@
+# applications_applications_cangjie_wrapper
+
+系统应用模块仓颉封装层
