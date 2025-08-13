@@ -19,8 +19,8 @@
         "adapted_system_type": [
             "standard"
         ],
-        "rom": "",
-        "ram": "",
+        "rom": "100KB",
+        "ram": "300KB",
         "deps": {
             "components": [
                 "cangjie_ark_interop",
