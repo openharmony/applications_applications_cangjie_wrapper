@@ -1,4 +1,4 @@
-# Settings
+# 应用仓颉接口
 
 ## 简介
 
@@ -6,7 +6,7 @@
 
 ### 架构图
 
-![](figures/zh-cn_image_0000001153225717.png)
+![](figures/application_cangjie_wrapper_framework.png)
 
 ## 目录
 
@@ -21,4 +21,4 @@ applications/standard/applications_cangjie_wrapper
 
 applications_cangjie_wrapper
 
-[applications_settings](https://gitee.com/openharmony/applications_settings/blob/master/README.md)
+[applications_settings](https://gitee.com/openharmony/applications_settings)
