@@ -1,4 +1,4 @@
-# Settings
+# applications_cangjie_wrapper
 
 ## Introduction
 
@@ -18,7 +18,5 @@ applications/standard/applications_cangjie_wrapper
 ```
 
 ## Repositories Involved
-
-applications_cangjie_wrapper
 
 [applications_settings](https://gitee.com/openharmony/applications_settings/blob/master/README.md)
