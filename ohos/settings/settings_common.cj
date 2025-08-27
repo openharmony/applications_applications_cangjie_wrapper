@@ -15,30 +15,46 @@
 
 package ohos.settings
 
-import ohos.base.*
-import ohos.ffi.*
 import ohos.labels.*
 
+/**
+ * Provide domain name for query.
+ *
+ * @relation namespace domainName
+ */
 @!APILevel[
     21,
     stagemodelonly: true,
     syscap: "SystemCapability.Applications.Settings.Core"
 ]
 public enum DomainName <: ToString {
+    /**
+     * Provide the domain name for device shared Key.
+     *
+     * @relation const DEVICE_SHARED: string
+     */
     @!APILevel[
         21,
         stagemodelonly: true,
-        syscap: "SystemCapability.Multimedia.Audio.Core"
+        syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    DEVICE_SHARED
+    DeviceShared
+    /**
+     * Provide the domain name for user property.
+     *
+     * @relation const USER_PROPERTY: string
+     */
     | @!APILevel[
         21,
         stagemodelonly: true,
-        syscap: "SystemCapability.Multimedia.Audio.Core"
+        syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    USER_PROPERTY
+    UserProperty
     | ...
 
+    /**
+     * Obtains the string of DomainName.
+     */
     @!APILevel[
         21,
         stagemodelonly: true,
@@ -46,45 +62,74 @@ public enum DomainName <: ToString {
     ]
     public override func toString(): String {
         match (this) {
-            case DEVICE_SHARED => "global"
-            case USER_PROPERTY => "system"
+            case DeviceShared => "global"
+            case UserProperty => "system"
             case _ => throw IllegalArgumentException("The type is not supported.")
         }
     }
 }
 
+/**
+ * Provides methods for setting time and date formats.
+ *
+ * @relation namespace date
+ */
 @!APILevel[
     21,
     stagemodelonly: true,
     syscap: "SystemCapability.Applications.Settings.Core"
 ]
 public enum Date <: ToString {
+    /**
+     * Indicates the date format.
+     *
+     * @relation const DATE_FORMAT: string
+     */
     @!APILevel[
         21,
         stagemodelonly: true,
-        syscap: "SystemCapability.Multimedia.Audio.Core"
+        syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    DATE_FORMAT
+    DateFormat
+    /**
+     * Specifies whether the time is displayed in 12-hour or 24-hour format.
+     *
+     * @relation const TIME_FORMAT: string
+     */
     | @!APILevel[
         21,
         stagemodelonly: true,
-        syscap: "SystemCapability.Multimedia.Audio.Core"
+        syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    TIME_FORMAT
+    TimeFormat
+    /**
+     * Specifies whether the date, time, and time zone are automatically obtained from the Network
+     * Identity and Time Zone (NITZ).
+     *
+     * @relation const AUTO_GAIN_TIME: string
+     */
     | @!APILevel[
         21,
         stagemodelonly: true,
-        syscap: "SystemCapability.Multimedia.Audio.Core"
+        syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    AUTO_GAIN_TIME
+    AutoGainTime
+    /**
+     * Specifies whether the time zone is automatically obtained from NITZ.
+     *
+     * @relation const AUTO_GAIN_TIME_ZONE: string
+     */
     | @!APILevel[
         21,
         stagemodelonly: true,
-        syscap: "SystemCapability.Multimedia.Audio.Core"
+        syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    AUTO_GAIN_TIME_ZONE
+    AutoGainTimeZone
     | ...
 
+    /**
+     * Obtains the string of Date.
+     */
     @!APILevel[
         21,
         stagemodelonly: true,
@@ -92,77 +137,134 @@ public enum Date <: ToString {
     ]
     public override func toString(): String {
         match (this) {
-            case DATE_FORMAT => "settings.date.date_format"
-            case TIME_FORMAT => "settings.date.time_format"
-            case AUTO_GAIN_TIME => "settings.date.auto_gain_time"
-            case AUTO_GAIN_TIME_ZONE => "settings.date.auto_gain_time_zone"
+            case DateFormat => "settings.date.date_format"
+            case TimeFormat => "settings.date.time_format"
+            case AutoGainTime => "settings.date.auto_gain_time"
+            case AutoGainTimeZone => "settings.date.auto_gain_time_zone"
             case _ => throw IllegalArgumentException("The type is not supported.")
         }
     }
 }
 
+/**
+ * Provides methods for setting the display effect, including the font size, screen brightness, screen rotation,
+ * animation factor, and display color.
+ *
+ * @relation namespace display
+ */
 @!APILevel[
     21,
     stagemodelonly: true,
     syscap: "SystemCapability.Applications.Settings.Core"
 ]
 public enum Display <: ToString {
+    /**
+     * Indicates the scaling factor of fonts, which is a float number.
+     *
+     * @relation const FONT_SCALE: string
+     */
     @!APILevel[
         21,
         stagemodelonly: true,
-        syscap: "SystemCapability.Multimedia.Audio.Core"
+        syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    FONT_SCALE
+    FontScale
+    /**
+     * Indicates the screen brightness. The value ranges from 0 to 255.
+     *
+     * @relation const SCREEN_BRIGHTNESS_STATUS: string
+     */
     | @!APILevel[
         21,
         stagemodelonly: true,
-        syscap: "SystemCapability.Multimedia.Audio.Core"
+        syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    SCREEN_BRIGHTNESS_STATUS
+    ScreenBrightnessStatus
+    /**
+     * Specifies whether automatic screen brightness adjustment is enabled.
+     *
+     * @relation const AUTO_SCREEN_BRIGHTNESS: string
+     */
     | @!APILevel[
         21,
         stagemodelonly: true,
-        syscap: "SystemCapability.Multimedia.Audio.Core"
+        syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    AUTO_SCREEN_BRIGHTNESS
+    AutoScreenBrightness
+    /**
+     * Indicates the duration that the device waits before going to sleep after a period of inactivity, in milliseconds.
+     *
+     * @relation const SCREEN_OFF_TIMEOUT: string
+     */
     | @!APILevel[
         21,
         stagemodelonly: true,
-        syscap: "SystemCapability.Multimedia.Audio.Core"
+        syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    SCREEN_OFF_TIMEOUT
+    ScreenOffTimeout
+    /**
+     * Indicates the screen rotation when no other policy is available.
+     *
+     * @relation const DEFAULT_SCREEN_ROTATION: string
+     */
     | @!APILevel[
         21,
         stagemodelonly: true,
-        syscap: "SystemCapability.Multimedia.Audio.Core"
+        syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    DEFAULT_SCREEN_ROTATION
+    DefaultScreenRotation
+    /**
+     * Indicates the scaling factor for the animation duration.
+     *
+     * @relation const ANIMATOR_DURATION_SCALE: string
+     */
     | @!APILevel[
         21,
         stagemodelonly: true,
-        syscap: "SystemCapability.Multimedia.Audio.Core"
+        syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    ANIMATOR_DURATION_SCALE
+    AnimatorDurationScale
+    /**
+     * Indicates the scaling factor for transition animations.
+     * If the value is 0, transition animations are disabled.
+     *
+     * @relation const TRANSITION_ANIMATION_SCALE: string
+     */
     | @!APILevel[
         21,
         stagemodelonly: true,
-        syscap: "SystemCapability.Multimedia.Audio.Core"
+        syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    TRANSITION_ANIMATION_SCALE
+    TransitionAnimationScale
+    /**
+     * Indicates the scaling factor for normal window animations.
+     * If the value is 0, window animations are disabled.
+     *
+     * @relation const WINDOW_ANIMATION_SCALE: string
+     */
     | @!APILevel[
         21,
         stagemodelonly: true,
-        syscap: "SystemCapability.Multimedia.Audio.Core"
+        syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    WINDOW_ANIMATION_SCALE
+    WindowAnimationScale
+    /**
+     * Specifies whether display color inversion is enabled.
+     * If the value is 1, display color inversion is enabled. If the value is 0, display color inversion is disabled.
+     *
+     * @relation const DISPLAY_INVERSION_STATUS: string
+     */
     | @!APILevel[
         21,
         stagemodelonly: true,
-        syscap: "SystemCapability.Multimedia.Audio.Core"
+        syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    DISPLAY_INVERSION_STATUS
+    DisplayInversionStatus
     | ...
 
+    /**
+     * Obtains the string of Display.
+     */
     @!APILevel[
         21,
         stagemodelonly: true,
@@ -170,15 +272,15 @@ public enum Display <: ToString {
     ]
     public override func toString(): String {
         match (this) {
-            case FONT_SCALE => "settings.display.font_scale"
-            case SCREEN_BRIGHTNESS_STATUS => "settings.display.screen_brightness_status"
-            case AUTO_SCREEN_BRIGHTNESS => "settings.display.auto_screen_brightness"
-            case SCREEN_OFF_TIMEOUT => "settings.display.screen_off_timeout"
-            case DEFAULT_SCREEN_ROTATION => "settings.display.default_screen_rotation"
-            case ANIMATOR_DURATION_SCALE => "settings.display.animator_duration_scale"
-            case TRANSITION_ANIMATION_SCALE => "settings.display.transition_animation_scale"
-            case WINDOW_ANIMATION_SCALE => "settings.display.window_animation_scale"
-            case DISPLAY_INVERSION_STATUS => "settings.display.display_inversion_status"
+            case FontScale => "settings.display.font_scale"
+            case ScreenBrightnessStatus => "settings.display.screen_brightness_status"
+            case AutoScreenBrightness => "settings.display.auto_screen_brightness"
+            case ScreenOffTimeout => "settings.display.screen_off_timeout"
+            case DefaultScreenRotation => "settings.display.default_screen_rotation"
+            case AnimatorDurationScale => "settings.display.animator_duration_scale"
+            case TransitionAnimationScale => "settings.display.transition_animation_scale"
+            case WindowAnimationScale => "settings.display.window_animation_scale"
+            case DisplayInversionStatus => "settings.display.display_inversion_status"
             case _ => throw IllegalArgumentException("The type is not supported.")
         }
     }
