@@ -19,11 +19,11 @@ applications/standard/applications_cangjie_wrapper
 
 ## 约束
 
-- 当前开放的应用设置仓颉接口仅支持standard设备。
+- 当前开放的设置应用仓颉接口仅支持standard设备。
 
 ## 使用说明
 
-提供以下应用设置功能：
+提供以下设置应用功能：
 
 - 查询时间和日期设置
 - 查询显示效果设置
@@ -38,7 +38,7 @@ applications/standard/applications_cangjie_wrapper
 - 启用/禁用飞行模式
 - 检查应用是否能够以悬浮窗形式显示
 
-应用设置相关API请参见[ohos.settings（设置数据项名称）](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_zh_cn/apis/BasicServicesKit/cj-apis-settings.md)。
+设置应用相关API请参见[ohos.settings（设置数据项名称）](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_zh_cn/apis/BasicServicesKit/cj-apis-settings.md)。
 
 ## 参与贡献
 
