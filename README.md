@@ -4,7 +4,7 @@
 
 The applications_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based on the capabilities of the Settings subsystem. The Settings is a system application prebuilt in OpenHarmony. It provides a human-machine interactions entry for users to set system configs like settings system time, lightness of screen and etc,the currently Cangjie open interface for settings only supports standard devices.
 
-### System Architecture
+## System Architecture
 
 ![](figures/application_cangjie_wrapper_architecture_en.png)
 

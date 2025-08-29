@@ -4,7 +4,7 @@
 
 应用仓颉接口是在 OpenHarmony 上基于应用子系统能力之上封装的仓颉API。当前仓颉只支持设置应用，设置应用是 OpenHarmony 系统中预置的系统应用，为用户提供设置系统属性的交互界面，例如设置系统时间，屏幕亮度等系统属性，当前开放的设置应用仓颉接口仅支持standard设备。
 
-### 系统架构
+## 系统架构
 
 ![](figures/application_cangjie_wrapper_architecture.png "应用仓颉架构图")
 
