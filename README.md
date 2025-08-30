@@ -8,13 +8,23 @@ The applications_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony ba
 
 ![](figures/application_cangjie_wrapper_architecture_en.png)
 
+As depicted in the architecture diagram:
+
+- query time and date settings: Provides an interface for retrieving the currently set time and date data items.  
+- query display effect settings: Provides an interface for retrieving the currently set display effect data items.  
+- query domain name: Provides an interface for retrieving the domain name.  
+- Cangjie applications FFI interface definition: Responsible for defining the C interoperability Cangjie interface, used to implement Cangjie setting application capabilities.  
+- application settings: Responsible for providing basic setting application functionalities, encapsulating C interfaces for Cangjie interoperability.
+
 ## Directory Structure
 
 ```
 applications/standard/applications_cangjie_wrapper
-├── ohos             # Cangjie Settings code
-├── kit              # Cangjie kit code
-├── figures          # architecture pictures
+├── ohos                       # Cangjie Settings code
+       └── settings    
+├── kit                        # Cangjie Settings kit code
+       └── BasicServicesKit    
+└── figures                    # architecture pictures
 ```
 
 ## Instructions For Use
