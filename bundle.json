@@ -1,6 +1,6 @@
 {
     "name": "@ohos/applications_cangjie_wrapper",
-    "description": "Settings app for standard system.",
+    "description": "The request_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based on the capabilities of the upload and download subsystem.",
     "version": "6.0",
     "license": "Apache License 2.0",
     "publishAs": "code-segment",
