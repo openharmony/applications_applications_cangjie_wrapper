@@ -22,12 +22,12 @@
 
 ```
 applications/standard/applications_cangjie_wrapper
-├── ohos                       # 仓颉设置应用接口实现
-       └── settings    
+├── figures                    # 存放README中的架构图
 ├── kit                        # 仓颉设置应用kit化接口
-       └── BasicServicesKit 
-├── test                       # 测试代码
-└── figures                    # 存放README中的架构图
+    └── BasicServicesKit 
+├── ohos                       # 仓颉设置应用接口实现
+    └── settings 
+└── test                       # 测试代码
 ```
 
 ## 使用说明
