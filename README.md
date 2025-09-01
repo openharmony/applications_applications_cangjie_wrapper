@@ -22,12 +22,12 @@ As depicted in the architecture diagram:
 
 ```
 applications/standard/applications_cangjie_wrapper
-├── ohos                       # Cangjie Settings code
-       └── settings    
+├── figures                    # architecture pictures
 ├── kit                        # Cangjie Settings kit code
-       └── BasicServicesKit   
-├── test                       # test code
-└── figures                    # architecture pictures
+    └── BasicServicesKit   
+├── ohos                       # Cangjie Settings code
+    └── settings  
+└── test                       # test code
 ```
 
 ## Instructions For Use
