@@ -25,7 +25,8 @@ applications/standard/applications_cangjie_wrapper
 ├── ohos                       # Cangjie Settings code
        └── settings    
 ├── kit                        # Cangjie Settings kit code
-       └── BasicServicesKit    
+       └── BasicServicesKit   
+├── test                       # test code
 └── figures                    # architecture pictures
 ```
 
