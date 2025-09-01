@@ -6,7 +6,7 @@
 
 ## 系统架构
 
-![](figures/application_cangjie_wrapper_architecture.png "应用仓颉架构图")
+!["应用仓颉架构图"](figures/application_cangjie_wrapper_architecture.png )
 
 如架构图所示：
 
@@ -23,7 +23,8 @@ applications/standard/applications_cangjie_wrapper
 ├── ohos                       # 仓颉设置应用接口实现
        └── settings    
 ├── kit                        # 仓颉设置应用kit化接口
-       └── BasicServicesKit    
+       └── BasicServicesKit 
+├── test                       # 测试代码
 └── figures                    # 存放README中的架构图
 ```
 
