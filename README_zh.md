@@ -6,6 +6,8 @@
 
 ## 系统架构
 
+**图 1**  应用仓颉架构图
+
 !["应用仓颉架构图"](figures/application_cangjie_wrapper_architecture.png )
 
 如架构图所示：
