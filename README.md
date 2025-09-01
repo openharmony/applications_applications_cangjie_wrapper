@@ -6,7 +6,9 @@ The applications_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony ba
 
 ## System Architecture
 
-![](figures/application_cangjie_wrapper_architecture_en.png)
+**Figure 1** Architecture of the application_cangjie_wrapper
+
+!["Architecture of the application_cangjie_wrapper"](figures/application_cangjie_wrapper_architecture_en.png)
 
 As depicted in the architecture diagram:
 
@@ -23,7 +25,8 @@ applications/standard/applications_cangjie_wrapper
 ├── ohos                       # Cangjie Settings code
        └── settings    
 ├── kit                        # Cangjie Settings kit code
-       └── BasicServicesKit    
+       └── BasicServicesKit   
+├── test                       # test code
 └── figures                    # architecture pictures
 ```
 
