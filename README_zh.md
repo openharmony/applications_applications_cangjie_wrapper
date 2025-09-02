@@ -22,12 +22,12 @@
 
 ```
 applications/standard/applications_cangjie_wrapper
-├── ohos                       # 仓颉设置应用接口实现
-       └── settings    
+├── figures                    # 存放README中的架构图
 ├── kit                        # 仓颉设置应用kit化接口
-       └── BasicServicesKit 
-├── test                       # 测试代码
-└── figures                    # 存放README中的架构图
+    └── BasicServicesKit 
+├── ohos                       # 仓颉设置应用接口实现
+    └── settings 
+└── test                       # 测试代码
 ```
 
 ## 使用说明
@@ -56,6 +56,3 @@ applications/standard/applications_cangjie_wrapper
 ## 相关仓
 
 [applications_settings](https://gitee.com/openharmony/applications_settings/blob/master/README_zh.md)  
-[arkcompiler_cangjie_ark_interop](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/tree/master)  
-[arkui_arkui_cangjie_wrapper](https://gitcode.com/openharmony-sig/arkui_arkui_cangjie_wrapper/tree/master)  
-[ability_ability_cangjie_wrapper](https://gitcode.com/openharmony-sig/ability_ability_cangjie_wrapper/tree/master)
