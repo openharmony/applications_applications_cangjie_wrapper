@@ -15,8 +15,8 @@
 - 查询时间和日期：提供获取当前设置的时间和日期数据项的接口。
 - 查询显示效果：提供获取当前设置的显示效果数据项的接口。
 - 查询域名：提供获取域名的接口。
-- 仓颉应用FFI接口定义：负责定义C互操作仓颉接口，用于实现仓颉设置应用能力。
-- 设置应用：负责提供设置应用基础功能，封装C接口提供给仓颉进行互操作。
+- 仓颉应用FFI接口定义：负责定义C语言互操作仓颉接口，用于实现仓颉设置应用能力。
+- 设置应用：负责提供设置应用基础功能，封装C语言接口提供给仓颉进行互操作。
 
 ## 目录
 
@@ -55,4 +55,14 @@ applications/standard/applications_cangjie_wrapper
 
 ## 相关仓
 
-[applications_settings](https://gitee.com/openharmony/applications_settings/blob/master/README_zh.md)  
+[applications_settings](https://gitee.com/openharmony/applications_settings/blob/master/README_zh.md)
+
+[cangjie_ark_interop](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/README_zh.md)
+
+[ability_cangjie_wrapper](https://gitcode.com/openharmony-sig/ability_ability_cangjie_wrapper/blob/master/README_zh.md)
+
+
+
+
+
+
