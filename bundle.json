@@ -25,7 +25,6 @@
             "components": [
                 "cangjie_ark_interop",
                 "ability_cangjie_wrapper",
-                "arkui_cangjie_wrapper",
                 "settings"
             ]
         },
