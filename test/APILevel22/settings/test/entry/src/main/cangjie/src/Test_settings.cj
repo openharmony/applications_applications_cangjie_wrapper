@@ -43,7 +43,7 @@ public func changeBrightnessTo(deltaX: Int32): Unit {
 @Test
 class Test_settings {
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func setAndGetBrightness(): Unit {
         //changeBrightnessTo(-200)
         Hilog.info(0, "CangjieTest", "Start")
@@ -56,7 +56,7 @@ class Test_settings {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testEnumDate(): Unit {
         let enumArray: Array<Date> = [DateFormat, TimeFormat, AutoGainTime, AutoGainTimeZone]
         let strArray: Array<String> = [
@@ -71,7 +71,7 @@ class Test_settings {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testEnumDisplay(): Unit {
         let enumArray: Array<Display> = [
             FontScale,
