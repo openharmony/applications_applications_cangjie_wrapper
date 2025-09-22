@@ -14,7 +14,7 @@ As depicted in the architecture diagram:
 
 - query time and date settings: Provides an interface for retrieving the currently set time and date data items.
 - query display effect settings: Provides an interface for retrieving the currently set display effect data items.
-- query domain name: Provides an interface for retrieving the domain name.
+- query domain name data items: Provide an interface for obtaining specified domain name data items, including device attribute shared domains and user attribute domains.
 - Cangjie applications FFI interface definition: Responsible for defining the C language interoperability Cangjie interface, used to implement Cangjie setting application capabilities.
 - application settings: Responsible for providing basic setting application functionalities, encapsulating C language interfaces for Cangjie interoperability.
 
@@ -23,29 +23,33 @@ As depicted in the architecture diagram:
 ```
 applications/standard/applications_cangjie_wrapper
 ├── figures                    # architecture pictures
-├── kit                        # Cangjie Settings kit code
-    └── BasicServicesKit   
-├── ohos                       # Cangjie Settings code
-    └── settings  
-└── test                       # test code
+├── kit
+│   └── BasicServicesKit       # Cangjie Settings kit code 
+├── ohos
+│   └── settings               # Cangjie Settings code
+└── test
+    └── APILevel22
+        └── settings           # Cangjie Settings test code
 ```
 
 ## Instructions For Use
 
-- The following settings functions are provided
-
+- The following settings functions are provided:
+  
   - Query time and date settings
   - Query display effect settings
-  - Query domain name
-- Compared with ArkTS, the following functions are temporarily not supported
+  - Query the relevant Settings of the specified domain name
 
+- Compared with ArkTS, the following functions are temporarily not supported:
+  
   - Set time and date
   - Set display effect
   - Register/Unregister domain name specified data item observer
   - Open network management settings page
   - Enable/Disable flight mode
   - Check if the application can be displayed in floating window form
-- For the settings APIs, please refer to [ohos.settings (Setting Data Item Names)](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/BasicServicesKit/cj-apis-settings.md).
+
+- For the settings APIs, please refer to [settings API reference](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/BasicServicesKit/cj-apis-settings.md).
 
 ## Code Contribution
 
