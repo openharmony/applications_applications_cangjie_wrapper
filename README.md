@@ -15,7 +15,7 @@ As depicted in the architecture diagram:
 - query time and date settings: Provides an interface for retrieving the currently set time and date data items.
 - query display effect settings: Provides an interface for retrieving the currently set display effect data items.
 - query domain name data items: Provide an interface for obtaining specified domain name data items, including device attribute shared domains and user attribute domains.
-- Cangjie applications FFI interface definition: Responsible for defining the C language interoperability Cangjie interface, used to implement Cangjie setting application capabilities.
+- Cangjie applications FFI interface definition: Responsible for defining the C language interoperability interface called by the Cangjie language, used to implement Cangjie setting application capabilities.
 - application settings: Responsible for providing basic setting application functionalities, encapsulating C language interfaces for Cangjie interoperability.
 
 ## Directory Structure
@@ -39,7 +39,6 @@ applications/standard/applications_cangjie_wrapper
   - Query time and date settings
   - Query display effect settings
   - Query the relevant Settings of the specified domain name
-
 - Compared with ArkTS, the following functions are temporarily not supported:
   
   - Set time and date
@@ -48,7 +47,6 @@ applications/standard/applications_cangjie_wrapper
   - Open network management settings page
   - Enable/Disable flight mode
   - Check if the application can be displayed in floating window form
-
 - For the settings APIs, please refer to [settings API reference](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/BasicServicesKit/cj-apis-settings.md).
 
 ## Code Contribution
@@ -62,3 +60,4 @@ Developers are welcome to contribute code, documentation, etc. For specific cont
 [cangjie_ark_interop](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/README.md)
 
 [ability_cangjie_wrapper](https://gitcode.com/openharmony-sig/ability_ability_cangjie_wrapper/blob/master/README.md)
+
