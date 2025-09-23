@@ -16,7 +16,9 @@
 - 查询显示效果：提供获取当前设置的显示效果数据项的接口。
 - 查询域名数据项：提供获取指定域名数据项的接口，包含设备属性共享域和用户属性域。
 - 仓颉应用FFI接口定义：负责定义被仓颉语言调用的C语言互操作接口，用于实现仓颉设置应用能力。
-- 设置应用模块：负责提供设置应用基础功能，封装C语言接口提供给仓颉进行互操作。
+- settings：负责提供设置应用基础功能，封装C语言接口提供给仓颉进行互操作。
+- cangjie_ark_interop：负责提供仓颉注解类定义，用于对API进行标注，以及提供抛向用户的BusinessException异常类定义。
+- ability_cangjie_wrapper：负责提供Ability或Application的上下文的基础能力，包括访问特定应用程序的资源等。
 
 ## 目录
 
@@ -28,8 +30,7 @@ applications/standard/applications_cangjie_wrapper
 ├── ohos
 │   └── settings            # 仓颉设置应用接口实现
 ├── test
-    └── APILevel22
-        └── settings        # 仓颉设置应用接口测试代码
+    └── settings            # 仓颉设置应用接口测试代码
 ```
 
 ## 使用说明
