@@ -42,7 +42,7 @@ func getErrorMsg(code: Int32): String {
  * @relation function getValueSync(context: Context, name: string, defValue: string): string
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Applications.Settings.Core"
 ]
 public func getValue<T>(context: UIAbilityContext, name: T, defValue: String): String where T <: ToString {
@@ -76,7 +76,7 @@ public func getValue<T>(context: UIAbilityContext, name: T, defValue: String): S
  * @relation function getValueSync(context: Context, name: string, defValue: string, domainName: string): string
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Applications.Settings.Core"
 ]
 public func getValue<T, P>(context: UIAbilityContext, name: T, defValue: String, domainName: P): String where T <: ToString,

@@ -23,7 +23,7 @@ import ohos.labels.*
  * @relation namespace domainName
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Applications.Settings.Core"
 ]
 public enum DomainName <: ToString {
@@ -33,7 +33,7 @@ public enum DomainName <: ToString {
      * @relation const DEVICE_SHARED: string
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     DeviceShared
@@ -43,7 +43,7 @@ public enum DomainName <: ToString {
      * @relation const USER_PROPERTY: string
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     UserProperty
@@ -53,7 +53,7 @@ public enum DomainName <: ToString {
      * Obtains the string of DomainName.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     public override func toString(): String {
@@ -71,7 +71,7 @@ public enum DomainName <: ToString {
  * @relation namespace date
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Applications.Settings.Core"
 ]
 public enum Date <: ToString {
@@ -81,7 +81,7 @@ public enum Date <: ToString {
      * @relation const DATE_FORMAT: string
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     DateFormat
@@ -91,7 +91,7 @@ public enum Date <: ToString {
      * @relation const TIME_FORMAT: string
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     TimeFormat
@@ -102,7 +102,7 @@ public enum Date <: ToString {
      * @relation const AUTO_GAIN_TIME: string
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     AutoGainTime
@@ -112,7 +112,7 @@ public enum Date <: ToString {
      * @relation const AUTO_GAIN_TIME_ZONE: string
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     AutoGainTimeZone
@@ -122,7 +122,7 @@ public enum Date <: ToString {
      * Obtains the string of Date.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     public override func toString(): String {
@@ -143,7 +143,7 @@ public enum Date <: ToString {
  * @relation namespace display
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Applications.Settings.Core"
 ]
 public enum Display <: ToString {
@@ -153,7 +153,7 @@ public enum Display <: ToString {
      * @relation const FONT_SCALE: string
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     FontScale
@@ -163,7 +163,7 @@ public enum Display <: ToString {
      * @relation const SCREEN_BRIGHTNESS_STATUS: string
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     ScreenBrightnessStatus
@@ -173,7 +173,7 @@ public enum Display <: ToString {
      * @relation const AUTO_SCREEN_BRIGHTNESS: string
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     AutoScreenBrightness
@@ -183,7 +183,7 @@ public enum Display <: ToString {
      * @relation const SCREEN_OFF_TIMEOUT: string
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     ScreenOffTimeout
@@ -193,7 +193,7 @@ public enum Display <: ToString {
      * @relation const DEFAULT_SCREEN_ROTATION: string
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     DefaultScreenRotation
@@ -203,7 +203,7 @@ public enum Display <: ToString {
      * @relation const ANIMATOR_DURATION_SCALE: string
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     AnimatorDurationScale
@@ -214,7 +214,7 @@ public enum Display <: ToString {
      * @relation const TRANSITION_ANIMATION_SCALE: string
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     TransitionAnimationScale
@@ -225,7 +225,7 @@ public enum Display <: ToString {
      * @relation const WINDOW_ANIMATION_SCALE: string
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     WindowAnimationScale
@@ -236,7 +236,7 @@ public enum Display <: ToString {
      * @relation const DISPLAY_INVERSION_STATUS: string
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     DisplayInversionStatus
@@ -246,7 +246,7 @@ public enum Display <: ToString {
      * Obtains the string of Display.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     public override func toString(): String {
