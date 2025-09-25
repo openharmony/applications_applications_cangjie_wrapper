@@ -23,9 +23,8 @@
 - 查询时间和日期功能封装：基于底层settings部件提供的时间和日期数据项查询能力，实现获取当前设置的时间和日期数据项的功能。
 - 查询显示效果功能封装：基于底层settings部件提供的显示效果查询能力，实现获取当前设置的显示效果数据项的功能。
 - 查询域名数据项功能封装：基于底层settings部件提供的基于域名的数据项查询能力，实现获取指定域名数据项的功能。
-- 仓颉应用FFI接口定义：负责定义被仓颉语言调用的C语言互操作接口，用于实现仓颉设置应用能力。
 
-架构图中的依赖部件引入说明：
+架构图中的依赖部件引入说明
 
 - settings：负责提供设置应用基础功能，封装C语言接口提供给仓颉进行互操作。
 - cangjie_ark_interop：负责提供仓颉注解类定义，用于对API进行标注，以及提供抛向用户的BusinessException异常类定义。
@@ -76,5 +75,3 @@ applications/standard/applications_cangjie_wrapper
 [cangjie_ark_interop](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/README_zh.md)
 
 [ability_cangjie_wrapper](https://gitcode.com/openharmony-sig/ability_ability_cangjie_wrapper/blob/master/README_zh.md)
-
-

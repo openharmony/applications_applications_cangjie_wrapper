@@ -21,19 +21,14 @@ Interface Layer
 Framework Layer
 
 - Time and Date Query Function Encapsulation: Based on the time and date data item query capabilities provided by the underlying settings component, implements the function of obtaining current time and date settings.
-
 - Display Effects Query Function Encapsulation: Based on the display effects query capabilities provided by the underlying settings component, implements the function of obtaining current display effect settings.
-
 - Domain Data Item Query Function Encapsulation: Based on the domain-based data item query capabilities provided by the underlying settings component, implements the function of obtaining specified domain data items.
 
-- Cangjie Application FFI Interface Definition: Responsible for defining C language interoperability interfaces called by the Cangjie language to implement Cangjie settings application capabilities.
 
-Dependency Component Introduction in Architecture Diagram:
+Dependency Component Introduction in Architecture Diagram
 
 - settings: Responsible for providing basic settings application functionality, encapsulating C language interfaces for interoperability with Cangjie.
-
 - cangjie_ark_interop: Responsible for providing Cangjie annotation class definitions for API annotation, and providing BusinessException exception class definitions thrown to users.
-
 - ability_cangjie_wrapper: Responsible for providing basic capabilities of Ability or Application context, including accessing specific application resources.
 
 ## Directory
