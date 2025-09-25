@@ -26,7 +26,7 @@ Framework Layer
 
 - Domain Data Item Query Function Encapsulation: Based on the domain-based data item query capabilities provided by the underlying settings component, implements the function of obtaining specified domain data items.
 
-- Cangjie Application FFI Interface Definition: Responsible for defining C language interoperability interfaces called by the Cangjie language to implement Cangjie settings application capabilities.
+- 
 
 Dependency Component Introduction in Architecture Diagram:
 
