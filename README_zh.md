@@ -2,7 +2,7 @@
 
 ## 简介
 
-应用仓颉封装是 OpenHarmony 上面向开发者提供使用仓颉语言进行应用开发时的应用相关能力。当前仓颉提供访问系统属性的能力，例如查询时间和日期、查询显示效果等系统属性。当前设置应用仓颉封装的接口支持 standard 设备。
+应用仓颉封装是 OpenHarmony 上面向开发者提供使用仓颉语言进行应用开发时的应用相关能力。当前仓颉提供访问系统属性的能力，例如查询时间和日期、查询显示效果等系统属性，且仅支持 standard 设备。
 
 ## 系统架构
 
@@ -10,19 +10,18 @@
 
 !["应用仓颉架构图"](figures/application_cangjie_wrapper_architecture.png )
 
-如架构图所示：
 
 接口层说明:
 
-- Settings部件：向开发者提供查询时间和日期能力、获取当前设置的显示效果数据项的能力、获取指定域名数据项的能力。其中域名数据项包含设备属性共享域和用户属性域。
+- Settings功能接口：向开发者提供查询时间和日期能力、获取当前设置的显示效果数据项的能力、获取指定域名数据项的能力。其中域名数据项包含设备属性共享域和用户属性域。
 
 框架层说明:
 
-- Settings部件封装：提供访问系统相关属性的能力。该封装层是基于settings提供的功能进行的仓颉封装实现。
+- Settings功能封装：提供访问系统相关属性的能力。该封装层是基于Settings提供的功能进行的仓颉封装实现。
 
 架构图中的依赖部件引入说明:
 
-- settings：负责提供设置应用基础功能，封装C语言接口提供给仓颉进行互操作。
+- Settings：负责提供设置应用基础功能。
 - cangjie_ark_interop：负责提供仓颉注解类定义，用于对API进行标注，以及提供抛向用户的BusinessException异常类定义。
 - ability_cangjie_wrapper：负责提供Ability或Application的上下文的基础能力，包括访问特定应用程序的资源等。
 
@@ -47,7 +46,7 @@ applications/standard/applications_cangjie_wrapper
 - 查询显示效果
 - 查询指定的相关域名
 
-设置应用相关API请参见[设置应用API参考](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_zh_cn/apis/BasicServicesKit/cj-apis-settings.md)。
+设置应用相关API请参见[设置应用API参考](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_zh_cn/apis/BasicServicesKit/cj-apis-settings.md)，相关指南请参见[设置应用指南](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/Dev_Guide/source_zh_cn/settings/cj-settings.md)。
 
 ## 约束
 
