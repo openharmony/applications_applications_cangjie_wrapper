@@ -1,63 +1,78 @@
-# applications_cangjie_wrapper
+# Application Cangjie Wrapper
 
 ## Introduction
 
-The applications_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based on the capabilities of the Settings subsystem. The Settings is a system application prebuilt in OpenHarmony. It provides a human-machine interactions entry for users to set system configs like settings system time, lightness of screen and etc,the currently Cangjie open interface for settings only supports standard devices.
+The Application Cangjie Wrapper provides application-related capabilities for developers using the Cangjie language for application development on OpenHarmony. Currently, Cangjie only supports settings applications. The settings application is a pre-installed system application in the OpenHarmony system that provides users with an interactive interface for setting system properties, such as system time and screen brightness. The current settings application Cangjie interface supports standard devices.
 
 ## System Architecture
 
-**Figure 1** Architecture of the application_cangjie_wrapper
+**Figure 1** Application Cangjie Architecture
 
-!["Architecture of the application_cangjie_wrapper"](figures/application_cangjie_wrapper_architecture_en.png)
+!["Application Cangjie Architecture"](figures/application_cangjie_wrapper_architecture_en.png)
 
-As depicted in the architecture diagram:
+As shown in the architecture diagram:
 
-- query time and date settings: Provides an interface for retrieving the currently set time and date data items.
-- query display effect settings: Provides an interface for retrieving the currently set display effect data items.
-- query domain name data items: Provide an interface for obtaining specified domain name data items, including device attribute shared domains and user attribute domains.
-- Cangjie applications FFI interface definition: Responsible for defining the C language interoperability interface called by the Cangjie language, used to implement Cangjie setting application capabilities.
-- application settings: Responsible for providing basic setting application functionalities, encapsulating C language interfaces for Cangjie interoperability.
+Interface Layer
 
-## Directory Structure
+- Query Time and Date: Provides developers with the ability to obtain current time and date settings.
+- Query Display Effects: Provides developers with the ability to obtain current display effect settings.
+- Query Domain Data Items: Provides developers with the ability to obtain specified domain data items, including device property shared domains and user property domains.
+
+Framework Layer
+
+- Time and Date Query Function Encapsulation: Based on the time and date data item query capabilities provided by the underlying settings component, implements the function of obtaining current time and date settings.
+- Display Effects Query Function Encapsulation: Based on the display effects query capabilities provided by the underlying settings component, implements the function of obtaining current display effect settings.
+- Domain Data Item Query Function Encapsulation: Based on the domain-based data item query capabilities provided by the underlying settings component, implements the function of obtaining specified domain data items.
+
+
+Dependency Component Introduction in Architecture Diagram
+
+- settings: Responsible for providing basic settings application functionality, encapsulating C language interfaces for interoperability with Cangjie.
+- cangjie_ark_interop: Responsible for providing Cangjie annotation class definitions for API annotation, and providing BusinessException exception class definitions thrown to users.
+- ability_cangjie_wrapper: Responsible for providing basic capabilities of Ability or Application context, including accessing specific application resources.
+
+## Directory
 
 ```
 applications/standard/applications_cangjie_wrapper
-├── figures                    # architecture pictures
+├── figures                 # Architecture diagrams in README
 ├── kit
-│   └── BasicServicesKit       # Cangjie Settings kit code 
+│   └── BasicServicesKit    # Cangjie settings application kit interfaces
 ├── ohos
-│   └── settings               # Cangjie Settings code
+│   └── settings            # Cangjie settings application interface implementation
 └── test
-    └── APILevel22
-        └── settings           # Cangjie Settings test code
+    └── settings            # Cangjie settings application interface test code
 ```
 
-## Instructions For Use
+## Usage Instructions
 
-- The following settings functions are provided:
-  
-  - Query time and date settings
-  - Query display effect settings
-  - Query the relevant Settings of the specified domain name
-- Compared with ArkTS, the following functions are temporarily not supported:
-  
-  - Set time and date
-  - Set display effect
-  - Register/Unregister domain name specified data item observer
-  - Open network management settings page
-  - Enable/Disable flight mode
-  - Check if the application can be displayed in floating window form
-- For the settings APIs, please refer to [settings API reference](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/BasicServicesKit/cj-apis-settings.md).
+Provides the following settings application functions:
 
-## Code Contribution
+- Query time and date settings
+- Query display effect settings
+- Query related settings for specified domains
 
-Developers are welcome to contribute code, documentation, etc. For specific contribution processes and methods, please refer to [Code Contribution](https://gitcode.com/openharmony/docs/blob/master/en/contribute/code-contribution.md).
+For settings application APIs, please refer to [Settings Application API Reference](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/BasicServicesKit/cj-apis-settings.md).
 
-## Repositories Involved
+## Constraints
 
-[applications_settings](https://gitee.com/openharmony/applications_settings/blob/master/README.md)
+Compared to APIs provided by ArkTS, the following functions are not currently supported:
+
+- Setting time and date
+- Setting display effects
+- Registering/unregistering domain-specified data item observers
+- Opening network management settings page
+- Enabling/disabling airplane mode
+- Checking if an application can be displayed as a floating window
+
+## Contribution
+
+Developers are welcome to contribute code, documentation, etc. For specific contribution processes and methods, please refer to [Contribution](https://gitcode.com/openharmony/docs/blob/master/en/contribute/how-to-contribute.md).
+
+## Related Repositories
+
+[applications_settings](https://gitcode.com/openharmony/applications_settings/blob/master/README.md)
 
 [cangjie_ark_interop](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/README.md)
 
 [ability_cangjie_wrapper](https://gitcode.com/openharmony-sig/ability_ability_cangjie_wrapper/blob/master/README.md)
-
