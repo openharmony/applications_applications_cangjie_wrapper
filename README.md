@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Application Cangjie Wrapper provides application-related capabilities for developers using the Cangjie language for application development on OpenHarmony. Currently, Cangjie only supports settings applications. The settings application is a pre-installed system application in the OpenHarmony system that provides users with an interactive interface for setting system properties, such as system time and screen brightness. The current settings application Cangjie interface supports standard devices.
+The Application Cangjie Wrapper provides application-related capabilities for developers using the Cangjie language for application development on OpenHarmony. The Application Cangjie Wrapper provides developers with the ability to access system settings. For example, obtaining system settings such as screen brightness and date/time format. Only standard devices are supported.
 
 ## System Architecture
 
@@ -12,22 +12,20 @@ The Application Cangjie Wrapper provides application-related capabilities for de
 
 As shown in the architecture diagram:
 
-Interface Layer
+Interface Layer:
 
-- Query Time and Date: Provides developers with the ability to obtain current time and date settings.
-- Query Display Effects: Provides developers with the ability to obtain current display effect settings.
-- Query Domain Data Items: Provides developers with the ability to obtain specified domain data items, including device property shared domains and user property domains.
+- Settings interface:
+    - Provides developers the ability to query time and date: Developers can specify the display format of time and date, such as 12-hour format / 24-hour format.
+    - Provides the ability to retrieve display effect settings. For example, developers can get the value of the screen brightness setting.
+    - Ability to retrieve data items for a specified domain, where domain data items include device attribute shared domain and user attribute domain.
 
-Framework Layer
+Framework Layer:
 
-- Time and Date Query Function Encapsulation: Based on the time and date data item query capabilities provided by the underlying settings component, implements the function of obtaining current time and date settings.
-- Display Effects Query Function Encapsulation: Based on the display effects query capabilities provided by the underlying settings component, implements the function of obtaining current display effect settings.
-- Domain Data Item Query Function Encapsulation: Based on the domain-based data item query capabilities provided by the underlying settings component, implements the function of obtaining specified domain data items.
+- Settings Function Encapsulation: Provides the ability to access system-related properties. This encapsulation layer is implemented based on the functionalities provided by Settings.
 
+Dependency Component Introduction in Architecture Diagram:
 
-Dependency Component Introduction in Architecture Diagram
-
-- settings: Responsible for providing basic settings application functionality, encapsulating C language interfaces for interoperability with Cangjie.
+- settings: Responsible for providing basic settings application functionality.
 - cangjie_ark_interop: Responsible for providing Cangjie annotation class definitions for API annotation, and providing BusinessException exception class definitions thrown to users.
 - ability_cangjie_wrapper: Responsible for providing basic capabilities of Ability or Application context, including accessing specific application resources.
 
