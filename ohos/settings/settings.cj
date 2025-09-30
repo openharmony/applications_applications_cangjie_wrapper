@@ -59,6 +59,7 @@ public func getValue<T>(context: UIAbilityContext, name: T, defValue: String): S
         ) {
             let result = FfiSettingsGetValue(stageContext, cName.value, cDefValue.value, CString(CPointer()), inout ret)
             if (result.isNull()) {
+                SETTINGS_LOG.error("getValue ${getErrorMsg(ret)}")
                 throw BusinessException(ret, getErrorMsg(ret))
             }
             value = result.toString()
@@ -95,6 +96,7 @@ public func getValue<T, P>(context: UIAbilityContext, name: T, defValue: String,
         ) {
             let result = FfiSettingsGetValue(stageContext, cName.value, cDefValue.value, cDomainName.value, inout ret)
             if (result.isNull()) {
+                SETTINGS_LOG.error("domain getValue ${getErrorMsg(ret)}")
                 throw BusinessException(ret, getErrorMsg(ret))
             }
             value = result.toString()

@@ -28,6 +28,7 @@ Dependency Component Introduction in Architecture Diagram:
 - settings: Responsible for providing basic settings application functionality.
 - cangjie_ark_interop: Responsible for providing Cangjie annotation class definitions for API annotation, and providing BusinessException exception class definitions thrown to users.
 - ability_cangjie_wrapper: Responsible for providing basic capabilities of Ability or Application context, including accessing specific application resources.
+- Cangjie DFX: Responsible for providing log interfaces, providing Cangjie interfaces that can be called by the file management Cangjie interface to print logs at critical paths.
 
 ## Directory
 
@@ -74,3 +75,5 @@ Developers are welcome to contribute code, documentation, etc. For specific cont
 [cangjie_ark_interop](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/README.md)
 
 [ability_cangjie_wrapper](https://gitcode.com/openharmony-sig/ability_ability_cangjie_wrapper/blob/master/README.md)
+
+[hiviewdfx_hiviewdfx_cangjie_wrapper](https://gitcode.com/openharmony-sig/hiviewdfx_hiviewdfx_cangjie_wrapper/blob/master/README.md)
