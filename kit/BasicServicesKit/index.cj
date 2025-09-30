@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package BasicServicesKit
+package kit.BasicServicesKit
 
 public import ohos.device_info.*
 public import ohos.request.*

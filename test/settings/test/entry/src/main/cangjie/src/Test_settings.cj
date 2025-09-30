@@ -15,15 +15,15 @@
 
 package ohos_app_cangjie_entry
 
-import BasicServicesKit.*
+import kit.BasicServicesKit.*
 import std.unittest.testmacro.*
 import std.unittest.*
 import std.unittest.common.*
 import std.unittest.testmacro.*
 import ohos.base.*
 import std.regex.Regex
-import TestKit.*
-import PerformanceAnalysisKit.*
+import kit.TestKit.*
+import kit.PerformanceAnalysisKit.*
 
 public func changeBrightnessTo(deltaX: Int32): Unit {
     Hilog.info(0, "CangjieTest", "swipe before")
