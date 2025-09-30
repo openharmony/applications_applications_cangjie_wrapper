@@ -27,6 +27,7 @@
 - Settings：负责提供设置应用基础功能。
 - cangjie_ark_interop：负责提供仓颉注解类定义，用于对API进行标注，以及提供抛向用户的BusinessException异常类定义。
 - ability_cangjie_wrapper：负责提供Ability或Application的上下文的基础能力，包括访问特定应用程序的资源等。
+- hiviewdfx_cangjie_wrapper：负责提供日志接口，提供可被文件管理仓颉接口调用的在关键路径处打印日志能力的仓颉接口。
 
 ## 目录
 
@@ -73,3 +74,5 @@ applications/standard/applications_cangjie_wrapper
 [cangjie_ark_interop](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/README_zh.md)
 
 [ability_cangjie_wrapper](https://gitcode.com/openharmony-sig/ability_ability_cangjie_wrapper/blob/master/README_zh.md)
+
+[hiviewdfx_hiviewdfx_cangjie_wrapper](https://gitcode.com/openharmony-sig/hiviewdfx_hiviewdfx_cangjie_wrapper/blob/master/README_zh.md)

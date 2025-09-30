@@ -18,6 +18,7 @@ ohos_cangjie_shared_library("ohos.settings") {
     "settings.cj",
     "settings_common.cj",
     "settings_ffi.cj",
+    "settings_log.cj",
   ]
 
   cj_external_deps = [
@@ -25,6 +26,7 @@ ohos_cangjie_shared_library("ohos.settings") {
     "cangjie_ark_interop:ohos.business_exception",
     "cangjie_ark_interop:ohos.ffi",
     "cangjie_ark_interop:ohos.labels",
+    "hiviewdfx_cangjie_wrapper:ohos.hilog",
   ]
 
   external_deps = [ "settings:cj_settings_ffi" ]
