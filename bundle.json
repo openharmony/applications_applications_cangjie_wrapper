@@ -31,7 +31,7 @@
         "build": {
             "sub_component": [
                 "//applications/standard/applications_cangjie_wrapper/ohos/settings:ohos.settings",
-                "//applications/standard/applications_cangjie_wrapper/kit/BasicServicesKit:BasicServicesKit"
+                "//applications/standard/applications_cangjie_wrapper/kit/BasicServicesKit:kit.BasicServicesKit"
             ],
             "inner_kits": [
             ],

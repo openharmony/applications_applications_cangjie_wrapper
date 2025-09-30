@@ -13,7 +13,7 @@
 
 import("//build/templates/cangjie/cjc.gni")
 
-ohos_cangjie_shared_library("BasicServicesKit") {
+ohos_cangjie_shared_library("kit.BasicServicesKit") {
   sources = ["index.cj"]
 
   cj_deps = ["../../ohos/settings:ohos.settings"]
