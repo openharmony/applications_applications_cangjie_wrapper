@@ -1,4 +1,4 @@
-# Application Cangjie Wrapper
+# Application Cangjie Wrapper(beta feature)
 
 ## Introduction
 
