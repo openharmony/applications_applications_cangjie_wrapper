@@ -40,8 +40,6 @@ func getErrorMsg(code: Int32): String {
 /**
  * Get value from settingsdata.
  * @throws { IllegalArgumentException } - The context is invalid.
- *
- * @relation function getValueSync(context: Context, name: string, defValue: string): string
  */
 @!APILevel[
     22,
@@ -75,8 +73,6 @@ public func getValue<T>(context: UIAbilityContext, name: T, defValue: String): S
  * Get value from settingsdata(synchronous method).
  *
  * @throws { IllegalArgumentException } - The context is invalid.
- *
- * @relation function getValueSync(context: Context, name: string, defValue: string, domainName: string): string
  */
 @!APILevel[
     22,
