@@ -13,6 +13,8 @@
  * limitations under the License.
  */
 
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
+
 package ohos.settings
 
 import ohos.app.ability.ui_ability.{UIAbilityContext, getStageContext}
@@ -38,8 +40,6 @@ func getErrorMsg(code: Int32): String {
 /**
  * Get value from settingsdata.
  * @throws { IllegalArgumentException } - The context is invalid.
- *
- * @relation function getValueSync(context: Context, name: string, defValue: string): string
  */
 @!APILevel[
     since: "22",
@@ -59,6 +59,7 @@ public func getValue<T>(context: UIAbilityContext, name: T, defValue: String): S
         ) {
             let result = FfiSettingsGetValue(stageContext, cName.value, cDefValue.value, CString(CPointer()), inout ret)
             if (result.isNull()) {
+                SETTINGS_LOG.error("getValue ${getErrorMsg(ret)}")
                 throw BusinessException(ret, getErrorMsg(ret))
             }
             value = result.toString()
@@ -72,8 +73,6 @@ public func getValue<T>(context: UIAbilityContext, name: T, defValue: String): S
  * Get value from settingsdata(synchronous method).
  *
  * @throws { IllegalArgumentException } - The context is invalid.
- *
- * @relation function getValueSync(context: Context, name: string, defValue: string, domainName: string): string
  */
 @!APILevel[
     since: "22",
@@ -95,6 +94,7 @@ public func getValue<T, P>(context: UIAbilityContext, name: T, defValue: String,
         ) {
             let result = FfiSettingsGetValue(stageContext, cName.value, cDefValue.value, cDomainName.value, inout ret)
             if (result.isNull()) {
+                SETTINGS_LOG.error("domain getValue ${getErrorMsg(ret)}")
                 throw BusinessException(ret, getErrorMsg(ret))
             }
             value = result.toString()

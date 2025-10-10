@@ -15,11 +15,10 @@
 
 // The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
-package kit.BasicServicesKit
+package ohos.settings
 
-public import ohos.device_info.*
-public import ohos.request.*
-public import ohos.settings.*
-public import ohos.common_event_manager.*
-public import ohos.system_date_time.*
-public import ohos.battery_info.*
+import ohos.hilog.*
+
+const LOG_CORE: UInt32 = 0
+const SETTINGS_DOMAIN_ID: UInt32 = 0x500
+let SETTINGS_LOG = HilogChannel(LOG_CORE, SETTINGS_DOMAIN_ID, "CJ-Settings")

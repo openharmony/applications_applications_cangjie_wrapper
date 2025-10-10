@@ -1,7 +1,7 @@
 {
     "name": "@ohos/applications_cangjie_wrapper",
     "description": "The applications_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based on the capabilities of the Settings subsystem.",
-    "version": "6.0",
+    "version": "6.1",
     "license": "Apache License 2.0",
     "publishAs": "code-segment",
     "segment": {
@@ -25,13 +25,14 @@
             "components": [
                 "cangjie_ark_interop",
                 "ability_cangjie_wrapper",
+                "hiviewdfx_cangjie_wrapper",
                 "settings"
             ]
         },
         "build": {
             "sub_component": [
                 "//applications/standard/applications_cangjie_wrapper/ohos/settings:ohos.settings",
-                "//applications/standard/applications_cangjie_wrapper/kit/BasicServicesKit:BasicServicesKit"
+                "//applications/standard/applications_cangjie_wrapper/kit/BasicServicesKit:kit.BasicServicesKit"
             ],
             "inner_kits": [
             ],
