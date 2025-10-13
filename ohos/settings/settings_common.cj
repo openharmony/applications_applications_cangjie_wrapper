@@ -18,9 +18,11 @@
 package ohos.settings
 
 import ohos.labels.*
+import ohos.business_exception.BusinessException
 
 /**
  * Provide domain name for query.
+ *
  */
 @!APILevel[
     22,
@@ -29,6 +31,7 @@ import ohos.labels.*
 public enum DomainName <: ToString {
     /**
      * Provide the domain name for device shared Key.
+     *
      */
     @!APILevel[
         22,
@@ -37,6 +40,7 @@ public enum DomainName <: ToString {
     DeviceShared
     /**
      * Provide the domain name for user property.
+     *
      */
     | @!APILevel[
         22,
@@ -56,13 +60,14 @@ public enum DomainName <: ToString {
         match (this) {
             case DeviceShared => "global"
             case UserProperty => "system"
-            case _ => throw IllegalArgumentException("The type is not supported.")
+            case _ => throw BusinessException(401, "Parameter error.")
         }
     }
 }
 
 /**
  * Provides methods for setting time and date formats.
+ *
  */
 @!APILevel[
     22,
@@ -71,6 +76,7 @@ public enum DomainName <: ToString {
 public enum Date <: ToString {
     /**
      * Indicates the date format.
+     *
      */
     @!APILevel[
         22,
@@ -79,6 +85,7 @@ public enum Date <: ToString {
     DateFormat
     /**
      * Specifies whether the time is displayed in 12-hour or 24-hour format.
+     *
      */
     | @!APILevel[
         22,
@@ -88,6 +95,7 @@ public enum Date <: ToString {
     /**
      * Specifies whether the date, time, and time zone are automatically obtained from the Network
      * Identity and Time Zone (NITZ).
+     *
      */
     | @!APILevel[
         22,
@@ -96,6 +104,7 @@ public enum Date <: ToString {
     AutoGainTime
     /**
      * Specifies whether the time zone is automatically obtained from NITZ.
+     *
      */
     | @!APILevel[
         22,
@@ -117,7 +126,7 @@ public enum Date <: ToString {
             case TimeFormat => "settings.date.time_format"
             case AutoGainTime => "settings.date.auto_gain_time"
             case AutoGainTimeZone => "settings.date.auto_gain_time_zone"
-            case _ => throw IllegalArgumentException("The type is not supported.")
+            case _ => throw BusinessException(401, "Parameter error.")
         }
     }
 }
@@ -125,6 +134,7 @@ public enum Date <: ToString {
 /**
  * Provides methods for setting the display effect, including the font size, screen brightness, screen rotation,
  * animation factor, and display color.
+ *
  */
 @!APILevel[
     22,
@@ -133,6 +143,7 @@ public enum Date <: ToString {
 public enum Display <: ToString {
     /**
      * Indicates the scaling factor of fonts, which is a float number.
+     *
      */
     @!APILevel[
         22,
@@ -141,6 +152,7 @@ public enum Display <: ToString {
     FontScale
     /**
      * Indicates the screen brightness. The value ranges from 0 to 255.
+     *
      */
     | @!APILevel[
         22,
@@ -149,6 +161,7 @@ public enum Display <: ToString {
     ScreenBrightnessStatus
     /**
      * Specifies whether automatic screen brightness adjustment is enabled.
+     *
      */
     | @!APILevel[
         22,
@@ -157,6 +170,7 @@ public enum Display <: ToString {
     AutoScreenBrightness
     /**
      * Indicates the duration that the device waits before going to sleep after a period of inactivity, in milliseconds.
+     *
      */
     | @!APILevel[
         22,
@@ -165,6 +179,7 @@ public enum Display <: ToString {
     ScreenOffTimeout
     /**
      * Indicates the screen rotation when no other policy is available.
+     *
      */
     | @!APILevel[
         22,
@@ -173,6 +188,7 @@ public enum Display <: ToString {
     DefaultScreenRotation
     /**
      * Indicates the scaling factor for the animation duration.
+     *
      */
     | @!APILevel[
         22,
@@ -182,6 +198,7 @@ public enum Display <: ToString {
     /**
      * Indicates the scaling factor for transition animations.
      * If the value is 0, transition animations are disabled.
+     *
      */
     | @!APILevel[
         22,
@@ -191,6 +208,7 @@ public enum Display <: ToString {
     /**
      * Indicates the scaling factor for normal window animations.
      * If the value is 0, window animations are disabled.
+     *
      */
     | @!APILevel[
         22,
@@ -200,6 +218,7 @@ public enum Display <: ToString {
     /**
      * Specifies whether display color inversion is enabled.
      * If the value is 1, display color inversion is enabled. If the value is 0, display color inversion is disabled.
+     *
      */
     | @!APILevel[
         22,
@@ -226,7 +245,7 @@ public enum Display <: ToString {
             case TransitionAnimationScale => "settings.display.transition_animation_scale"
             case WindowAnimationScale => "settings.display.window_animation_scale"
             case DisplayInversionStatus => "settings.display.display_inversion_status"
-            case _ => throw IllegalArgumentException("The type is not supported.")
+            case _ => throw BusinessException(401, "Parameter error.")
         }
     }
 }
