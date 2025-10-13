@@ -60,7 +60,7 @@ public enum DomainName <: ToString {
         match (this) {
             case DeviceShared => "global"
             case UserProperty => "system"
-            case _ => throw BusinessException(401, "Parameter error.")
+            case _ => throw BusinessException(14800000, "Parameter error.")
         }
     }
 }
@@ -126,7 +126,7 @@ public enum Date <: ToString {
             case TimeFormat => "settings.date.time_format"
             case AutoGainTime => "settings.date.auto_gain_time"
             case AutoGainTimeZone => "settings.date.auto_gain_time_zone"
-            case _ => throw BusinessException(401, "Parameter error.")
+            case _ => throw BusinessException(14800000, "Parameter error.")
         }
     }
 }
@@ -245,7 +245,7 @@ public enum Display <: ToString {
             case TransitionAnimationScale => "settings.display.transition_animation_scale"
             case WindowAnimationScale => "settings.display.window_animation_scale"
             case DisplayInversionStatus => "settings.display.display_inversion_status"
-            case _ => throw BusinessException(401, "Parameter error.")
+            case _ => throw BusinessException(14800000, "Parameter error.")
         }
     }
 }

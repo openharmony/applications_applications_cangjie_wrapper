@@ -44,7 +44,7 @@ func getErrorMsg(code: Int32): String {
  * @param { T } name - Indicates the name of the character string.
  * @param { String } defValue - Indicates the default value of the character string.
  * @returns { String } Returns settingsdata value.
- * @throws { BusinessException } 401 - Parameter error.
+ * @throws { BusinessException } 14800000 - Parameter error.
  */
 @!APILevel[
     22,
@@ -53,7 +53,7 @@ func getErrorMsg(code: Int32): String {
 public func getValue<T>(context: UIAbilityContext, name: T, defValue: String): String where T <: ToString {
     let stageContext = getStageContext(context)
     if (stageContext.isNull()) {
-        throw BusinessException(401, "Parameter error.")
+        throw BusinessException(14800000, "Parameter error.")
     }
     var ret: Int32 = 0
     var value: String = ""
@@ -81,7 +81,7 @@ public func getValue<T>(context: UIAbilityContext, name: T, defValue: String): S
  * @param { String } defValue - Indicates the default value of the character string.
  * @param { P } domainName - Indicates the name of the domain name to set.
  * @returns { String } Returns settingsdata value.
- * @throws { BusinessException } 401 - Parameter error.
+ * @throws { BusinessException } 14800000 - Parameter error.
  */
 @!APILevel[
     22,
@@ -91,7 +91,7 @@ public func getValue<T, P>(context: UIAbilityContext, name: T, defValue: String,
     P <: ToString {
     let stageContext = getStageContext(context)
     if (stageContext.isNull()) {
-        throw BusinessException(401, "Parameter error.")
+        throw BusinessException(14800000, "Parameter error.")
     }
     var ret: Int32 = 0
     var value: String = ""
