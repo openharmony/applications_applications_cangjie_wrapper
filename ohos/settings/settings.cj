@@ -38,8 +38,13 @@ func getErrorMsg(code: Int32): String {
 }
 
 /**
- * Get value from settingsdata.
- * @throws { IllegalArgumentException } - The context is invalid.
+ * Get value from settingsdata(synchronous method).
+ *
+ * @param { UIAbilityContext } context - Indicates Context instance.
+ * @param { T } name - Indicates the name of the character string.
+ * @param { String } defValue - Indicates the default value of the character string.
+ * @returns { String } Returns settingsdata value.
+ * @throws { BusinessException } 14800000 - Parameter error.
  */
 @!APILevel[
     since: "22",
@@ -48,7 +53,7 @@ func getErrorMsg(code: Int32): String {
 public func getValue<T>(context: UIAbilityContext, name: T, defValue: String): String where T <: ToString {
     let stageContext = getStageContext(context)
     if (stageContext.isNull()) {
-        throw IllegalArgumentException("The context is invalid.")
+        throw BusinessException(14800000, "Parameter error.")
     }
     var ret: Int32 = 0
     var value: String = ""
@@ -59,7 +64,6 @@ public func getValue<T>(context: UIAbilityContext, name: T, defValue: String): S
         ) {
             let result = FfiSettingsGetValue(stageContext, cName.value, cDefValue.value, CString(CPointer()), inout ret)
             if (result.isNull()) {
-                SETTINGS_LOG.error("getValue ${getErrorMsg(ret)}")
                 throw BusinessException(ret, getErrorMsg(ret))
             }
             value = result.toString()
@@ -72,7 +76,12 @@ public func getValue<T>(context: UIAbilityContext, name: T, defValue: String): S
 /**
  * Get value from settingsdata(synchronous method).
  *
- * @throws { IllegalArgumentException } - The context is invalid.
+ * @param { UIAbilityContext } context - Indicates Context instance.
+ * @param { T } name - Indicates the name of the character string.
+ * @param { String } defValue - Indicates the default value of the character string.
+ * @param { P } domainName - Indicates the name of the domain name to set.
+ * @returns { String } Returns settingsdata value.
+ * @throws { BusinessException } 14800000 - Parameter error.
  */
 @!APILevel[
     since: "22",
@@ -82,7 +91,7 @@ public func getValue<T, P>(context: UIAbilityContext, name: T, defValue: String,
     P <: ToString {
     let stageContext = getStageContext(context)
     if (stageContext.isNull()) {
-        throw IllegalArgumentException("The context is invalid.")
+        throw BusinessException(14800000, "Parameter error.")
     }
     var ret: Int32 = 0
     var value: String = ""
@@ -94,7 +103,6 @@ public func getValue<T, P>(context: UIAbilityContext, name: T, defValue: String,
         ) {
             let result = FfiSettingsGetValue(stageContext, cName.value, cDefValue.value, cDomainName.value, inout ret)
             if (result.isNull()) {
-                SETTINGS_LOG.error("domain getValue ${getErrorMsg(ret)}")
                 throw BusinessException(ret, getErrorMsg(ret))
             }
             value = result.toString()
