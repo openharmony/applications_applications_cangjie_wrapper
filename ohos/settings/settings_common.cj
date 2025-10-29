@@ -51,6 +51,8 @@ public enum DomainName <: ToString {
 
     /**
      * Obtains the string of DomainName.
+     *
+     * @throws { BusinessException } 14800000 - Parameter error.
      */
     @!APILevel[
         22,
@@ -115,6 +117,8 @@ public enum Date <: ToString {
 
     /**
      * Obtains the string of Date.
+     *
+     * @throws { BusinessException } 14800000 - Parameter error.
      */
     @!APILevel[
         22,
@@ -229,6 +233,8 @@ public enum Display <: ToString {
 
     /**
      * Obtains the string of Display.
+     *
+     * @throws { BusinessException } 14800000 - Parameter error.
      */
     @!APILevel[
         22,
