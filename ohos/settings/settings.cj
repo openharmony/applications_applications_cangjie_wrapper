@@ -19,7 +19,7 @@ package ohos.settings
 
 import ohos.app.ability.ui_ability.{UIAbilityContext, getStageContext}
 import ohos.business_exception.{BusinessException, getUniversalErrorMsg}
-import ohos.labels.*
+import ohos.labels.APILevel
 
 import std.collection.HashMap
 

@@ -17,7 +17,7 @@
 
 package ohos.settings
 
-import ohos.hilog.*
+import ohos.hilog.HilogChannel
 
 const LOG_CORE: UInt32 = 0
 const SETTINGS_DOMAIN_ID: UInt32 = 0x500
