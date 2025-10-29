@@ -45,6 +45,7 @@ func getErrorMsg(code: Int32): String {
  * @param { String } defValue - Indicates the default value of the character string.
  * @returns { String } Returns settingsdata value.
  * @throws { BusinessException } 14800000 - Parameter error.
+ * @throws { BusinessException } 14700104 - System internal error such as out memory or deadlock.
  */
 @!APILevel[
     22,
@@ -82,6 +83,7 @@ public func getValue<T>(context: UIAbilityContext, name: T, defValue: String): S
  * @param { P } domainName - Indicates the name of the domain name to set.
  * @returns { String } Returns settingsdata value.
  * @throws { BusinessException } 14800000 - Parameter error.
+ * @throws { BusinessException } 14700104 - System internal error such as out memory or deadlock.
  */
 @!APILevel[
     22,
