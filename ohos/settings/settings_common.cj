@@ -25,7 +25,7 @@ import ohos.business_exception.BusinessException
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Applications.Settings.Core"
 ]
 public enum DomainName <: ToString {
@@ -34,7 +34,7 @@ public enum DomainName <: ToString {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     DeviceShared
@@ -43,7 +43,7 @@ public enum DomainName <: ToString {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     UserProperty
@@ -55,7 +55,7 @@ public enum DomainName <: ToString {
      * @throws { BusinessException } 14800000 - Parameter error.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     public override func toString(): String {
@@ -72,7 +72,7 @@ public enum DomainName <: ToString {
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Applications.Settings.Core"
 ]
 public enum Date <: ToString {
@@ -81,7 +81,7 @@ public enum Date <: ToString {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     DateFormat
@@ -90,7 +90,7 @@ public enum Date <: ToString {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     TimeFormat
@@ -100,7 +100,7 @@ public enum Date <: ToString {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     AutoGainTime
@@ -109,7 +109,7 @@ public enum Date <: ToString {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     AutoGainTimeZone
@@ -121,7 +121,7 @@ public enum Date <: ToString {
      * @throws { BusinessException } 14800000 - Parameter error.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     public override func toString(): String {
@@ -141,7 +141,7 @@ public enum Date <: ToString {
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Applications.Settings.Core"
 ]
 public enum Display <: ToString {
@@ -150,7 +150,7 @@ public enum Display <: ToString {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     FontScale
@@ -159,7 +159,7 @@ public enum Display <: ToString {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     ScreenBrightnessStatus
@@ -168,7 +168,7 @@ public enum Display <: ToString {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     AutoScreenBrightness
@@ -177,7 +177,7 @@ public enum Display <: ToString {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     ScreenOffTimeout
@@ -186,7 +186,7 @@ public enum Display <: ToString {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     DefaultScreenRotation
@@ -195,7 +195,7 @@ public enum Display <: ToString {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     AnimatorDurationScale
@@ -205,7 +205,7 @@ public enum Display <: ToString {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     TransitionAnimationScale
@@ -215,7 +215,7 @@ public enum Display <: ToString {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     WindowAnimationScale
@@ -225,7 +225,7 @@ public enum Display <: ToString {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     DisplayInversionStatus
@@ -237,7 +237,7 @@ public enum Display <: ToString {
      * @throws { BusinessException } 14800000 - Parameter error.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     public override func toString(): String {

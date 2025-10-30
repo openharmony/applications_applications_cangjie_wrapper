@@ -48,7 +48,7 @@ func getErrorMsg(code: Int32): String {
  * @throws { BusinessException } 14700104 - System internal error such as out memory or deadlock.
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Applications.Settings.Core"
 ]
 public func getValue<T>(context: UIAbilityContext, name: T, defValue: String): String where T <: ToString {
@@ -86,7 +86,7 @@ public func getValue<T>(context: UIAbilityContext, name: T, defValue: String): S
  * @throws { BusinessException } 14700104 - System internal error such as out memory or deadlock.
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Applications.Settings.Core"
 ]
 public func getValue<T, P>(context: UIAbilityContext, name: T, defValue: String, domainName: P): String where T <: ToString,
