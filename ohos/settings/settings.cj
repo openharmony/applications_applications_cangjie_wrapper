@@ -23,11 +23,9 @@ import ohos.labels.APILevel
 
 import std.collection.HashMap
 
-const SYSTEM_INTERNAL_ERROR: Int32 = 14700104
-let ERROR_CODE_MAP = HashMap<Int32, String>(
-    [(SYSTEM_INTERNAL_ERROR, "System internal error such as out memory or deadlock.")])
-
 func getErrorMsg(code: Int32): String {
+    let ERROR_CODE_MAP = HashMap<Int32, String>(
+        [(14700104, "System internal error such as out memory or deadlock.")])
     if (let Some(v) <- getUniversalErrorMsg(code)) {
         return v
     } else if (ERROR_CODE_MAP.contains(code)) {
