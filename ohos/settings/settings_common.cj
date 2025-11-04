@@ -17,7 +17,7 @@
 
 package ohos.settings
 
-import ohos.labels.APILevel
+import ohos.labels.{APILevel, Hide}
 import ohos.business_exception.BusinessException
 
 /**
@@ -47,7 +47,15 @@ public enum DomainName <: ToString {
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     UserProperty
-    | ...
+    /**
+     * Provide the domain name for user security property.
+     *
+     * This constants is a domain name for user security level key.
+     */
+    |
+    @!Hide
+    UserSecurity
+    |...
 
     /**
      * Obtains the string of DomainName.
@@ -172,6 +180,18 @@ public enum Display <: ToString {
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     AutoScreenBrightness
+    /**
+     * Indicates the value of AutoScreenBrightness when automatic screen brightness adjustment is used.
+     */
+    |
+    @!Hide
+    AutoScreenBrightnessMode
+    /**
+     * Indicates the value of AutoScreenBrightness when manual screen brightness adjustment is used.
+     */
+    |
+    @!Hide
+    ManualScreenBrightnessMode
     /**
      * Indicates the duration that the device waits before going to sleep after a period of inactivity, in milliseconds.
      *
