@@ -36,18 +36,20 @@ func getErrorMsg(code: Int32): String {
 }
 
 /**
- * Get value from settingsdata(synchronous method).
+ * Get value from settingsdata.
  *
- * @param { UIAbilityContext } context - Indicates Context instance.
+ * @param { UIAbilityContext } context - Indicates the Context or dataAbilityHelper used to access
+ * the database.
  * @param { T } name - Indicates the name of the character string.
  * @param { String } defValue - Indicates the default value of the character string.
  * @returns { String } Returns settingsdata value.
  * @throws { BusinessException } 14800000 - Parameter error.
- * @throws { BusinessException } 14700104 - System internal error such as out memory or deadlock.
  */
 @!APILevel[
     since: "22",
-    syscap: "SystemCapability.Applications.Settings.Core"
+    syscap: "SystemCapability.Applications.Settings.Core",
+    throwexception: true,
+    workerthread: true
 ]
 public func getValue<T>(context: UIAbilityContext, name: T, defValue: String): String where T <: ToString {
     let stageContext = getStageContext(context)
@@ -73,19 +75,21 @@ public func getValue<T>(context: UIAbilityContext, name: T, defValue: String): S
 }
 
 /**
- * Get value from settingsdata(synchronous method).
+ * Get value from settingsdata.
  *
- * @param { UIAbilityContext } context - Indicates Context instance.
+ * @param { UIAbilityContext } context -Indicates the Context or dataAbilityHelper used to access
+ * the database.
  * @param { T } name - Indicates the name of the character string.
  * @param { String } defValue - Indicates the default value of the character string.
  * @param { P } domainName - Indicates the name of the domain name to set.
  * @returns { String } Returns settingsdata value.
  * @throws { BusinessException } 14800000 - Parameter error.
- * @throws { BusinessException } 14700104 - System internal error such as out memory or deadlock.
  */
 @!APILevel[
     since: "22",
-    syscap: "SystemCapability.Applications.Settings.Core"
+    syscap: "SystemCapability.Applications.Settings.Core",
+    throwexception: true,
+    workerthread: true
 ]
 public func getValue<T, P>(context: UIAbilityContext, name: T, defValue: String, domainName: P): String where T <: ToString,
     P <: ToString {

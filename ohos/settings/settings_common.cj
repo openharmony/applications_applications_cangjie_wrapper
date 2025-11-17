@@ -22,7 +22,6 @@ import ohos.business_exception.BusinessException
 
 /**
  * Provide domain name for query.
- *
  */
 @!APILevel[
     since: "22",
@@ -31,36 +30,36 @@ import ohos.business_exception.BusinessException
 public enum DomainName <: ToString {
     /**
      * Provide the domain name for device shared Key.
-     *
+     * This constants is a domain name for device level shared key.
      */
     @!APILevel[
         since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     DeviceShared
+    |
     /**
      * Provide the domain name for user property.
-     *
+     * This constants is a domain name for user level key.
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     UserProperty
+    |
     /**
      * Provide the domain name for user security property.
      *
      * This constants is a domain name for user security level key.
      */
-    |
     @!Hide
     UserSecurity
     |...
 
     /**
      * Obtains the string of DomainName.
-     *
-     * @throws { BusinessException } 14800000 - Parameter error.
+     * @returns {String} A string representation of the DomainName.
      */
     @!APILevel[
         since: "22",
@@ -77,7 +76,6 @@ public enum DomainName <: ToString {
 
 /**
  * Provides methods for setting time and date formats.
- *
  */
 @!APILevel[
     since: "22",
@@ -86,37 +84,42 @@ public enum DomainName <: ToString {
 public enum Date <: ToString {
     /**
      * Indicates the date format.
-     *
+     * The formats mm/dd/yyyy, dd/mm/yyyy, and yyyy/mm/dd are available.
      */
     @!APILevel[
         since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     DateFormat
+    |
     /**
      * Specifies whether the time is displayed in 12-hour or 24-hour format.
-     *
+     * If the value is 12, the 12-hour format is used. If the value is 24, the 24-hour format is used.
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     TimeFormat
+    |
     /**
      * Specifies whether the date, time, and time zone are automatically obtained from the Network
      * Identity and Time Zone (NITZ).
-     *
+     * If the value is true, the information is automatically obtained from NITZ.
+     * If the value is false, the information is not obtained from NITZ.
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     AutoGainTime
+    |
     /**
      * Specifies whether the time zone is automatically obtained from NITZ.
-     *
+     * If the value is true, the information is automatically obtained from NITZ. If the value
+     * is false, the information is not obtained from NITZ.
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
@@ -125,8 +128,7 @@ public enum Date <: ToString {
 
     /**
      * Obtains the string of Date.
-     *
-     * @throws { BusinessException } 14800000 - Parameter error.
+     * @returns {String} A string representation of the Date.
      */
     @!APILevel[
         since: "22",
@@ -146,7 +148,6 @@ public enum Date <: ToString {
 /**
  * Provides methods for setting the display effect, including the font size, screen brightness, screen rotation,
  * animation factor, and display color.
- *
  */
 @!APILevel[
     since: "22",
@@ -155,96 +156,113 @@ public enum Date <: ToString {
 public enum Display <: ToString {
     /**
      * Indicates the scaling factor of fonts, which is a float number.
-     *
      */
     @!APILevel[
         since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     FontScale
+    |
     /**
      * Indicates the screen brightness. The value ranges from 0 to 255.
-     *
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     ScreenBrightnessStatus
+    |
     /**
      * Specifies whether automatic screen brightness adjustment is enabled.
-     *
+     * If the value is 1, automatic adjustment is enabled. If the value is 0, automatic
+     * adjustment is disabled.
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     AutoScreenBrightness
+    |
     /**
      * Indicates the value of AutoScreenBrightness when automatic screen brightness adjustment is used.
      */
-    |
     @!Hide
     AutoScreenBrightnessMode
+    |
     /**
      * Indicates the value of AutoScreenBrightness when manual screen brightness adjustment is used.
      */
-    |
     @!Hide
+    /**
+     * Indicates the value of ManualScreenBrightnessMode when manual screen brightness adjustment is used.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Applications.Settings.Core"
+    ]
     ManualScreenBrightnessMode
+    |
     /**
      * Indicates the duration that the device waits before going to sleep after a period of inactivity, in milliseconds.
-     *
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     ScreenOffTimeout
+    |
     /**
      * Indicates the screen rotation when no other policy is available.
-     *
+     * This constant is invalid when auto-rotation is enabled. When auto-rotation is disabled, the following
+     * values are available:
+     * 0 - The screen rotates 0 degrees.
+     * 1 - The screen rotates 90 degrees.
+     * 2 - The screen rotates 180 degrees.
+     * 3 - The screen rotates 270 degrees.
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     DefaultScreenRotation
+    |
     /**
      * Indicates the scaling factor for the animation duration.
-     *
+     * This affects the start delay and duration of all such animations. If the value is 0,
+     * the animation ends immediately. The default value is 1.
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     AnimatorDurationScale
+    |
     /**
      * Indicates the scaling factor for transition animations.
      * If the value is 0, transition animations are disabled.
-     *
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     TransitionAnimationScale
+    |
     /**
      * Indicates the scaling factor for normal window animations.
      * If the value is 0, window animations are disabled.
-     *
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     WindowAnimationScale
+    |
     /**
      * Specifies whether display color inversion is enabled.
-     * If the value is 1, display color inversion is enabled. If the value is 0, display color inversion is disabled.
-     *
+     * If the value is 1, display color inversion is enabled. If the value is 0, display color
+     * inversion is disabled.
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
@@ -253,8 +271,7 @@ public enum Display <: ToString {
 
     /**
      * Obtains the string of Display.
-     *
-     * @throws { BusinessException } 14800000 - Parameter error.
+     * @returns {String} A string representation of the Display.
      */
     @!APILevel[
         since: "22",
