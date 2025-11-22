@@ -35,6 +35,12 @@
                 "//applications/standard/applications_cangjie_wrapper/kit/BasicServicesKit:kit.BasicServicesKit"
             ],
             "inner_kits": [
+                {
+                    "name": "//applications/standard/applications_cangjie_wrapper:copy_sdk_applications_cangjie_libs"
+                },
+                {
+                    "name": "//applications/standard/applications_cangjie_wrapper:copy_sdk_applications_cangjie_libs_kit"
+                }
             ],
             "test": []
         }
