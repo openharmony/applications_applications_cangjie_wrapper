@@ -12,9 +12,7 @@
     "component": {
         "name": "applications_cangjie_wrapper",
         "subsystem": "applications",
-        "syscap": [
-            "SystemCapability.Applications.Settings.Core"
-        ],
+        "syscap": [],
         "features": [],
         "adapted_system_type": [
             "standard"
