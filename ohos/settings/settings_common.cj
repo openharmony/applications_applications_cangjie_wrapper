@@ -193,13 +193,6 @@ public enum Display <: ToString {
      * Indicates the value of AutoScreenBrightness when manual screen brightness adjustment is used.
      */
     @!Hide
-    /**
-     * Indicates the value of ManualScreenBrightnessMode when manual screen brightness adjustment is used.
-     */
-    @!APILevel[
-        since: "22",
-        syscap: "SystemCapability.Applications.Settings.Core"
-    ]
     ManualScreenBrightnessMode
     |
     /**
@@ -210,63 +203,6 @@ public enum Display <: ToString {
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     ScreenOffTimeout
-    |
-    /**
-     * Indicates the screen rotation when no other policy is available.
-     * This constant is invalid when auto-rotation is enabled. When auto-rotation is disabled, the following
-     * values are available:
-     * 0 - The screen rotates 0 degrees.
-     * 1 - The screen rotates 90 degrees.
-     * 2 - The screen rotates 180 degrees.
-     * 3 - The screen rotates 270 degrees.
-     */
-    @!APILevel[
-        since: "22",
-        syscap: "SystemCapability.Applications.Settings.Core"
-    ]
-    DefaultScreenRotation
-    |
-    /**
-     * Indicates the scaling factor for the animation duration.
-     * This affects the start delay and duration of all such animations. If the value is 0,
-     * the animation ends immediately. The default value is 1.
-     */
-    @!APILevel[
-        since: "22",
-        syscap: "SystemCapability.Applications.Settings.Core"
-    ]
-    AnimatorDurationScale
-    |
-    /**
-     * Indicates the scaling factor for transition animations.
-     * If the value is 0, transition animations are disabled.
-     */
-    @!APILevel[
-        since: "22",
-        syscap: "SystemCapability.Applications.Settings.Core"
-    ]
-    TransitionAnimationScale
-    |
-    /**
-     * Indicates the scaling factor for normal window animations.
-     * If the value is 0, window animations are disabled.
-     */
-    @!APILevel[
-        since: "22",
-        syscap: "SystemCapability.Applications.Settings.Core"
-    ]
-    WindowAnimationScale
-    |
-    /**
-     * Specifies whether display color inversion is enabled.
-     * If the value is 1, display color inversion is enabled. If the value is 0, display color
-     * inversion is disabled.
-     */
-    @!APILevel[
-        since: "22",
-        syscap: "SystemCapability.Applications.Settings.Core"
-    ]
-    DisplayInversionStatus
     | ...
 
     /**
@@ -283,11 +219,6 @@ public enum Display <: ToString {
             case ScreenBrightnessStatus => "settings.display.screen_brightness_status"
             case AutoScreenBrightness => "settings.display.auto_screen_brightness"
             case ScreenOffTimeout => "settings.display.screen_off_timeout"
-            case DefaultScreenRotation => "settings.display.default_screen_rotation"
-            case AnimatorDurationScale => "settings.display.animator_duration_scale"
-            case TransitionAnimationScale => "settings.display.transition_animation_scale"
-            case WindowAnimationScale => "settings.display.window_animation_scale"
-            case DisplayInversionStatus => "settings.display.display_inversion_status"
             case _ => throw BusinessException(14800000, "Parameter error.")
         }
     }
