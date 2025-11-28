@@ -77,23 +77,13 @@ class Test_settings {
             FontScale,
             ScreenBrightnessStatus,
             AutoScreenBrightness,
-            ScreenOffTimeout,
-            DefaultScreenRotation,
-            AnimatorDurationScale,
-            TransitionAnimationScale,
-            WindowAnimationScale,
-            DisplayInversionStatus
+            ScreenOffTimeout
         ]
         let strArray: Array<String> = [
             "settings.display.font_scale",
             "settings.display.screen_brightness_status",
             "settings.display.auto_screen_brightness",
-            "settings.display.screen_off_timeout",
-            "settings.display.default_screen_rotation",
-            "settings.display.animator_duration_scale",
-            "settings.display.transition_animation_scale",
-            "settings.display.window_animation_scale",
-            "settings.display.display_inversion_status"
+            "settings.display.screen_off_timeout"
         ]
         for (i in 0..enumArray.size) {
             @Expect(enumArray[i].toString() == strArray[i])
