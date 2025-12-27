@@ -53,7 +53,7 @@ public enum DomainName <: ToString {
      *
      * This constants is a domain name for user security level key.
      */
-    @!Hide
+    @!Hide[isChecked: true]
     UserSecurity
     |...
 
@@ -186,13 +186,13 @@ public enum Display <: ToString {
     /**
      * Indicates the value of AutoScreenBrightness when automatic screen brightness adjustment is used.
      */
-    @!Hide
+    @!Hide[isChecked: true]
     AutoScreenBrightnessMode
     |
     /**
      * Indicates the value of AutoScreenBrightness when manual screen brightness adjustment is used.
      */
-    @!Hide
+    @!Hide[isChecked: true]
     ManualScreenBrightnessMode
     |
     /**
