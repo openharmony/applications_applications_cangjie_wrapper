@@ -16,12 +16,17 @@
 import("//build/templates/cangjie/cjc.gni")
 
 ohos_cangjie_shared_library("ohos.settings") {
-  sources = [
-    "settings.cj",
-    "settings_common.cj",
-    "settings_ffi.cj",
-    "settings_log.cj",
-  ]
+
+  if (is_mingw || is_mac){
+    sources = [ "../../mock/ohos.settings.cj" ]
+  } else {
+    sources = [
+      "settings.cj",
+      "settings_common.cj",
+      "settings_ffi.cj",
+      "settings_log.cj",
+    ]
+  }
 
   cj_external_deps = [
     "ability_cangjie_wrapper:ohos.app.ability.ui_ability",
