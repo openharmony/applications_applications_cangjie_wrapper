@@ -18,65 +18,138 @@ package ohos.settings
 import ohos.app.ability.ui_ability.UIAbilityContext
 import ohos.labels.APILevel
 
-@!APILevel[since: "22", syscap: "SystemCapability.Applications.Settings.Core", throwexception: true, workerthread: true]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.Applications.Settings.Core",
+    throwexception: true,
+    workerthread: true
+]
 public func getValue<T>(context: UIAbilityContext, name: T, defValue: String): String where T <: ToString {
     return String()
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.Applications.Settings.Core", throwexception: true, workerthread: true]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.Applications.Settings.Core",
+    throwexception: true,
+    workerthread: true
+]
 public func getValue<T, P>(context: UIAbilityContext, name: T, defValue: String, domainName: P): String where T <: ToString {
     return String()
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.Applications.Settings.Core"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.Applications.Settings.Core"
+]
 public enum DomainName <: ToString {
-    @!APILevel[since: "22", syscap: "SystemCapability.Applications.Settings.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Applications.Settings.Core"
+    ]
     DeviceShared
-    | @!APILevel[since: "22", syscap: "SystemCapability.Applications.Settings.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Applications.Settings.Core"
+    ]
     UserProperty
     | ...
 
-    @!APILevel[since: "22", syscap: "SystemCapability.Applications.Settings.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Applications.Settings.Core"
+    ]
     public override func toString(): String {
         return String()
     }
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.Applications.Settings.Core"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.Applications.Settings.Core"
+]
 public enum Date <: ToString {
-    @!APILevel[since: "22", syscap: "SystemCapability.Applications.Settings.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Applications.Settings.Core"
+    ]
     DateFormat
-    | @!APILevel[since: "22", syscap: "SystemCapability.Applications.Settings.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Applications.Settings.Core"
+    ]
     TimeFormat
-    | @!APILevel[since: "22", syscap: "SystemCapability.Applications.Settings.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Applications.Settings.Core"
+    ]
     AutoGainTime
-    | @!APILevel[since: "22", syscap: "SystemCapability.Applications.Settings.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Applications.Settings.Core"
+    ]
     AutoGainTimeZone
     | ...
 
-    @!APILevel[since: "22", syscap: "SystemCapability.Applications.Settings.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Applications.Settings.Core"
+    ]
     public override func toString(): String {
         return String()
     }
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.Applications.Settings.Core"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.Applications.Settings.Core"
+]
 public enum Display <: ToString {
-    @!APILevel[since: "22", syscap: "SystemCapability.Applications.Settings.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Applications.Settings.Core"
+    ]
     FontScale
-    | @!APILevel[since: "22", syscap: "SystemCapability.Applications.Settings.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Applications.Settings.Core"
+    ]
     ScreenBrightnessStatus
-    | @!APILevel[since: "22", syscap: "SystemCapability.Applications.Settings.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Applications.Settings.Core"
+    ]
     AutoScreenBrightness
-    | @!APILevel[since: "22", syscap: "SystemCapability.Applications.Settings.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Applications.Settings.Core"
+    ]
     ScreenOffTimeout
-    | @!APILevel[since: "22", syscap: "SystemCapability.Applications.Settings.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Applications.Settings.Core"
+    ]
     AutoScreenBrightnessMode
-    | @!APILevel[since: "22", syscap: "SystemCapability.Applications.Settings.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Applications.Settings.Core"
+    ]
     ManualScreenBrightnessMode
     | ...
 
-    @!APILevel[since: "22", syscap: "SystemCapability.Applications.Settings.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Applications.Settings.Core"
+    ]
     public override func toString(): String {
         return String()
     }
