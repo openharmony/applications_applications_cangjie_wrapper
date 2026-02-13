@@ -25,7 +25,8 @@ ohos_cangjie_shared_library("kit.BasicServicesKit") {
     "request_cangjie_wrapper:ohos.request",
     "time_cangjie_wrapper:ohos.system_date_time",
     "notification_cangjie_wrapper:ohos.common_event_manager",
-    "powermgr_cangjie_wrapper:ohos.battery_info"
+    "powermgr_cangjie_wrapper:ohos.battery_info",
+    "notification_cangjie_wrapper:ohos.events.emitter"
   ]
 
   subsystem_name = "applications"
