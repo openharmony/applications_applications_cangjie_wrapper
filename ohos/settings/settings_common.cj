@@ -186,13 +186,19 @@ public enum Display <: ToString {
     /**
      * Indicates the value of AutoScreenBrightness when automatic screen brightness adjustment is used.
      */
-    @!Hide[isChecked: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Applications.Settings.Core"
+    ]
     AutoScreenBrightnessMode
     |
     /**
-     * Indicates the value of AutoScreenBrightness when manual screen brightness adjustment is used.
+     * Indicates the value of ManualScreenBrightnessMode when manual screen brightness adjustment is used.
      */
-    @!Hide[isChecked: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Applications.Settings.Core"
+    ]
     ManualScreenBrightnessMode
     |
     /**
@@ -219,6 +225,8 @@ public enum Display <: ToString {
             case ScreenBrightnessStatus => "settings.display.screen_brightness_status"
             case AutoScreenBrightness => "settings.display.auto_screen_brightness"
             case ScreenOffTimeout => "settings.display.screen_off_timeout"
+            case AutoScreenBrightnessMode => "1"
+            case ManualScreenBrightnessMode => "0"
             case _ => throw BusinessException(14800000, "Parameter error.")
         }
     }
